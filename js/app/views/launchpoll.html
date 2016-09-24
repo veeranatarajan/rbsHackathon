@@ -1,24 +1,45 @@
-<!--
-contact form created for treehouse competition.
--->
-<form id="contact">
-  <div class="container">
-    <div class="head">
-      <h2>Enter a New Poll / Survey</h2>
+<div>
+    <form id="contact" novalidate>
+        <div class="containerpoll">
+            <div class="head">
+                <h2>Enter a New Poll / Survey</h2>
+            </div>
+            <div class="dropbox">
+                <select class="form-control">
+                    <option value="Poll">Poll</option>
+                    <option value="Survey">Survey</option>
+                </select>
+            </div >
+            <input  type="text" name="name" placeholder="Topic" /><br />
+            <input  type="date"  placeholder="Start Date" /><br />
+            <input  type="date"  placeholder="End Date" /><br />
+            <textarea type="text" name="message" placeholder="Details"></textarea><br />
+            <div><h4 style="color : #1b2b5e; font-size : 20px;">Cost 50 pts</h4></div>
+            <button id="submit" class="btn btn-primary launchbtnpoll" type="button" ng-click="pollsuccess()">
+                Submit
+            </button>
+        </div>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Success !</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Your Poll or Survey has been sucessfully Registered!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary launchbtnpoll" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
     </div>
-<div class="dropbox">
-<select>
-  <option value="Poll">Poll</option>
-  <option value="Survey">Survey</option>
-</select>
+
 </div>
-    <input type="text" name="name" placeholder="Topic" /><br />
-    <input  type="date"  placeholder="Start Date" /><br />
-    <input  type="date"  placeholder="End Date" /><br />
-    <textarea type="text" name="message" placeholder="Details"></textarea><br />
-    <div><h1 style="color : white; font-size : 20px;">Cost : 50 points</h1></div>
-    <button id="submit" type="submit">
-      Submit
-    </button>
-  </div>
-</form>

@@ -1,64 +1,34 @@
-
-
-<div style="margin-top: -143px; " >
-    <!-- Full Width Image Header -->
-
-
     <!-- Page Content -->
     <div class="container-fluid">
-
-        <h1 class="thick-heading">
-           <!-- ||Polls & surveys||-->
-        </h1>
 
         <!-- First Featurette -->
         <div class="featurette" id="about">
             <!------------------------code---------------start---------------->
-            <div class="container">
+            <div class="containerpolls">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="box">
-                            <div class="box-icona">
+                            <div class="box-icon">
                                 <span class="fa fa-4x fa-html5"></span>
                             </div>
                             <div class="info">
-                                <h4 class="text-center">Open Polls/Surveys</h4>
+                                <h4 class="text-center">Open Polls/Survey</h4>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                           
-                                            <th class="tabletxt">Date </th>
-                                            <th class="tabletxt">Subject </th>
-                                            <th class="tabletxt">No of Participant</th>
+                                            <th>SNO</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Points</th>
 
                                         </tr>
                                     </thead>
-                                   <tbody>
-                                        <tr class="tabletxt">
-                                            <td class="tabletxt">23/09/2016</td>
-                                            <td class="tabletxt">Equity Research</td>
-                                            <td class="tabletxt">25</td>
-                                            
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td class="tabletxt">17/09/2016</td>
-                                            <td class="tabletxt">Salary Account</td>
-                                            <td class="tabletxt">25</td>
-                                           
-                                        </tr>
-                                        
-                                        <tr class="tabletxt">
-                                            <td class="tabletxt">11/09/2016</td>
-                                            <td class="tabletxt">Gold Loan</td>
-                                            <td class="tabletxt">25</td>
-                                            
-                                        </tr>
-                                         <tr class="tabletxt">
-                                            <td class="tabletxt">11/09/2016</td>
-                                            <td class="tabletxt">Mutual Fund</td>
-                                            <td class="tabletxt">25</td>
-                                            
+                                    <tbody>
+                                        <tr ng-repeat="poll in pollsData">
+                                            <th scope="row">{{poll.date}}</th>
+                                            <td>{{poll.name}}</td>
+                                            <td>{{poll.topic}}</td>
+                                            <td ng-click="detailsPopup(poll)">{{poll.Points}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -70,46 +40,27 @@
 
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="box">
-                            <div class="box-icon">
+                            <div class="box-icon close-pull">
                                 <span class="fa fa-4x fa-css3"></span>
                             </div>
                             <div class="info">
-                                <h4 class="text-center">Closed Polls/Surveys</h4>
+                                <h4 class="text-center">Closed Polls/Survey</h4>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th class="tabletxt">Date </th>
-                                            <th class="tabletxt">Subject </th>
-                                            <th class="tabletxt">No of Participant</th>
+                                            <th>Date</th>
+                                            <th>Name</th>
+                                            <th>Topic</th>
+                                            <th>Points</th>
 
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="tabletxt">
-                                            <td class="tabletxt">11/08/2016</td>
-                                            <td class="tabletxt">Mutual Fund</td>
-                                            <td class="tabletxt">25</td>
-                                            
-                                            
-                                        </tr>
-                                        <tr class="tabletxt">
-                                            <td class="tabletxt">02/05/2016</td>
-                                            <td class="tabletxt">Investment Banking</td>
-                                            <td class="tabletxt">25</td>
-                                           
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td class="tabletxt">23/07/2016</td>
-                                            <td class="tabletxt">Home Loan</td>
-                                            <td class="tabletxt">25</td>
-                                            
-                                        </tr>
-                                           <tr>
-                                            <td class="tabletxt">23/07/2016</td>
-                                            <td class="tabletxt">Vehicle Loan</td>
-                                            <td class="tabletxt">25</td>
-                                            
+                                        <tr ng-repeat="poll in closedPollData">
+                                            <th scope="row">{{poll.date}}</th>
+                                            <td>{{poll.name}}</td>
+                                            <td>{{poll.topic}}</td>
+                                            <td ng-click="detailsPopup(poll)">{{poll.Points}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -121,9 +72,12 @@
                 </div>
 
             </div>
+            </div>
+
+            <!-- jQuery -->
+
+        <div class="launch-poll-section text-center">
+            <button type="button" class="btn btn-primary launchbtnpoll" ><a href="#!/launchpoll">Launch Poll / Survey</a></button>
+            <button type="button" class="btn btn-primary launchbtnpoll" ><a href="">View Poll/Survey Status</a></button>
         </div>
-       <div style="text-align:center">  
-    <button class="submitbtnn"><a href="#!/launchpoll">Launch Poll/Survey</a></button>
-</div>  
         </div>
-    </div>

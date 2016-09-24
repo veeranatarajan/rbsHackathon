@@ -6,9 +6,8 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/base.css" rel="stylesheet" type="text/css"/>
         <link href="css/connnections.css" rel="stylesheet" type="text/css"/>
-        <link href="css/launchpolls_surveys.css" rel="stylesheet" type="text/css">
         <link href="css/polls_surveys.css" rel="stylesheet" type="text/css">
-
+        <link href="css/launchpolls_surveys.css" rel="stylesheet" type="text/css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -19,6 +18,7 @@
         <script src="js/app/controllers/homeCtrl.js"></script>
         <script src="js/app/controllers/connectionsCtrl.js"></script>
         <script src="js/app/controllers/pollssurveysCtrl.js"></script>
+        <script src="js/app/controllers/launchpollCtrl.js"></script>
     </head>
     <body>
         <div id="page-container" ng-app="rbsApp">
@@ -31,10 +31,10 @@
                         </div>
                         <div class="menu_bottom">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#!/home">Home</a></li>
-                                <li><a href="#!/connections">Connections</a></li>
-                                <li><a href="#!/pollsurveys">Polls & Surveys</a></li>
-                                <li><a href="#!/groups">Groups</a></li>
+                                <li class="home"><a href="#!/home">Home</a></li>
+                                <li class="connection"><a href="#!/connections">Connections</a></li>
+                                <li class="pollsurvey"><a href="#!/pollsurveys">Polls & Surveys</a></li>
+                                <li class="group"><a href="">Groups</a></li>
                                 <li><a href="">Discussion Forums</a></li>
                                 <li><a href="">Reward Store</a></li>
                                 <li><a href="">Campaign</a></li>
@@ -51,7 +51,7 @@
                                 <label>Points:</label>&nbsp;<strong><span>9060 pts</span></strong>
                             </div>
                             <div class="prof_nam">
-                                <label>Manager:</label>&nbsp;<strong><span>Bruce Dern</span></strong>
+                                <label>Manager:</label>&nbsp;<strong><a href="javascript:void(0);" title="Do you want to rate it ?" data-toggle="modal" data-target="#myMan"><span>Bruce Dern</span></a></strong>
                             </div>
                         </div>
                         <div class="profile_img">
@@ -61,6 +61,79 @@
                 </div>
             </div>
             <div class="pageHolder" ng-view></div>
+        </div>
+        <div id="myMan" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        NPS Rating&nbsp;&nbsp;&nbsp;
+                        <span class="poor">1 - Never</span>&nbsp;&nbsp;
+                        <span class="average">   5 - Likely</span>&nbsp;&nbsp;
+                        <span class="good">   10 - Most likely</span>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="question">
+                            How likely are you to recommend ?
+                        </div>
+                        <div class="rating">
+                            <input type="radio"  name="portion_num" value="1">
+                            <br>
+                            <label>1</label>
+                        </div>
+                        <div class="rating">
+                            <input type="radio"  name="portion_num" value="2">
+                            <br>
+                            <label>2</label>
+                        </div>
+                        <div class="rating">
+                            <input type="radio"  name="portion_num" value="3">
+                            <br>
+                            <label>3</label>
+                        </div>
+                        <div class="rating">
+                            <input type="radio"  name="portion_num" value="4">
+                            <br>
+                            <label>4</label>
+                        </div>
+                        <div class="rating">
+                            <input type="radio" name="portion_num" value="5">
+                            <br>
+                            <label>5</label>
+                        </div>
+                        <div class="rating">
+                            <input type="radio" name="portion_num" value="6">
+                            <br>
+                            <label>6</label>
+                        </div>
+                        <div class="rating">
+                            <input type="radio"  name="portion_num" value="7">
+                            <br>
+                            <label>7</label>
+                        </div>
+                        <div class="rating">
+                            <input type="radio"  name="portion_num" value="8">
+                            <br>
+                            <label>8</label>
+                        </div>
+                        <div class="rating">
+                            <input type="radio"  name="portion_num" value="9">
+                            <br>
+                            <label>9</label>
+                        </div>
+                        <div class="rating">
+                            <input type="radio"  name="portion_num" value="10">
+                            <br>
+                            <label>10</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal">submit</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

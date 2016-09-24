@@ -1,20 +1,99 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="pageHolder">
+        <div class="pageHolder" ng-click="searchHide();">
             <section class="grps-sec col-md-12">
                 <div class="col-md-6">
                     <div class="panel panel-primary connPanel">
-                        <div class="panel-heading">Recommend to Your Connections</div>
+                        <div class="panel-heading">Recommend to Your Connections ( 500 pts to earn )</div>
                         <div class="panel-body">
-                            <div class="recomList" ng-repeat="rlist in recomList">
+                            <div class="recomList" id="user_recom_1" >
+                            <div>
                                 <div class="col-xs-6 leader_name">
-                                    {{rlist.pname}}
+                                    Platinum Credit Card
                                 </div>
                                 <div class="col-xs-3 rank">
-                                    {{rlist.points}}
+                                    2pts
                                 </div>
                                 <div class="col-xs-3 leader_img">
                                     <img src="img/user.png" class="img-circle" popover="{{rlist.pname}}"  popover-trigger="focus"/>
+                                </div>
+                            </div>
+                            <div class="recommd_1_1" style="display: none;">
+                                <a href=""><img src="img/accept.png" class="img-circle"></a>
+                                <a href=""><img src="img/close.png" class="img-circle"></a>
+                                <a href=""><img src="img/View_Details.png" class="img-circle"></a>
+                            </div>
+                        </div>
+                            <div class="recomList" id="user_recom_2" >
+                                <div>
+                                    <div class="col-xs-6 leader_name">
+                                        Fuel Credit Card
+                                    </div>
+                                    <div class="col-xs-3 rank">
+                                        2pts
+                                    </div>
+                                    <div class="col-xs-3 leader_img">
+                                        <img src="img/user.png" class="img-circle" popover="{{rlist.pname}}"  popover-trigger="focus"/>
+                                    </div>
+                                </div>
+                                <div class="recommd_1_1" style="display: none;">
+                                    <a href=""><img src="img/accept.png" class="img-circle"></a>
+                                    <a href=""><img src="img/close.png" class="img-circle"></a>
+                                    <a href=""><img src="img/View_Details.png" class="img-circle"></a>
+                                </div>
+                            </div>
+                            <div class="recomList" id="user_recom_3" >
+                                <div>
+                                    <div class="col-xs-6 leader_name">
+                                        Mutual Funds
+                                    </div>
+                                    <div class="col-xs-3 rank">
+                                        10pts
+                                    </div>
+                                    <div class="col-xs-3 leader_img">
+                                        <img src="img/user.png" class="img-circle" popover="{{rlist.pname}}"  popover-trigger="focus"/>
+                                    </div>
+                                </div>
+                                <div class="recommd_1_1" style="display: none;">
+                                    <a href=""><img src="img/accept.png" class="img-circle"></a>
+                                    <a href=""><img src="img/close.png" class="img-circle"></a>
+                                    <a href=""><img src="img/View_Details.png" class="img-circle"></a>
+                                </div>
+                            </div>
+                            <div class="recomList" id="user_recom_4" >
+                                <div>
+                                    <div class="col-xs-6 leader_name">
+                                        Car Loan
+                                    </div>
+                                    <div class="col-xs-3 rank">
+                                        8pts
+                                    </div>
+                                    <div class="col-xs-3 leader_img">
+                                        <img src="img/user.png" class="img-circle" popover="{{rlist.pname}}"  popover-trigger="focus"/>
+                                    </div>
+                                </div>
+                                <div class="recommd_1_1" style="display: none;">
+                                    <a href=""><img src="img/accept.png" class="img-circle"></a>
+                                    <a href=""><img src="img/close.png" class="img-circle"></a>
+                                    <a href=""><img src="img/View_Details.png" class="img-circle"></a>
+                                </div>
+                            </div>
+                            <div class="recomList" id="user_recom_5" >
+                                <div>
+                                    <div class="col-xs-6 leader_name">
+                                        Home Loan
+                                    </div>
+                                    <div class="col-xs-3 rank">
+                                        5pts
+                                    </div>
+                                    <div class="col-xs-3 leader_img">
+                                        <img src="img/user.png" class="img-circle" popover="{{rlist.pname}}"  popover-trigger="focus"/>
+                                    </div>
+                                </div>
+                                <div class="recommd_1_1" style="display: none;">
+                                    <a href=""><img src="img/accept.png" class="img-circle"></a>
+                                    <a href=""><img src="img/close.png" class="img-circle"></a>
+                                    <a href=""><img src="img/View_Details.png" class="img-circle"></a>
                                 </div>
                             </div>
                         </div>
@@ -24,8 +103,8 @@
                     <div class="panel panel-primary connPanel">
                         <div class="panel-heading">
                             My Connection
-                            <input class="searchConnTxt pull-right" type="text" placeholder="Search Connection" ng-model="userSearch"/>
-                            <div class="pull-right searchRes">
+                            <input class="searchConnTxt pull-right" ng-keypress="searchShow()" type="text" placeholder="Search Connection" ng-model="userSearch"/>
+                            <div class="pull-right searchRes" ng-show="showSearch">
                                 <div ng-repeat="user in users | filter:userSearch">
                                     <div class="searchContent">
                                         {{user.firstname}} {{user.lastname}}
@@ -53,7 +132,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-3 raveBtn">
-                                    <button class="btn">Chat</button>
+                                    <button class="btn">Recommend</button>
                                 </div>
                             </div>
                         </div>
@@ -61,24 +140,24 @@
                 </div>
 
             </section>
-            <!--<section class="grps-sec col-md-8">
+            <section class="grps-sec col-md-8">
                 <div class="col-md-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">Link Social Network</div>
                         <div class="panel-body">
                             <div class="socialImgs" id="fb"></div>
                             <div class="socialImgs" id="tweet"></div>
-                            <div class="socialImgs" id="linkedin"></div>
+                            <!--<div class="socialImgs" id="linkedin"></div>-->
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <!--<div class="col-md-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">Search Connection</div>
                         <div class="panel-body"></div>
                     </div>
-                </div>
-            </section>-->
+                </div>-->
+            </section>
         </div>
     </div>
 </div>

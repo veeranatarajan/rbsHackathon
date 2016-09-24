@@ -7,7 +7,7 @@
 }
 .grps-sec{
     margin: 5px 0;
-    height: 250px;
+    /*height: 250px;*/
 }
 .connPanel > .panel-body{
     height: 285px;
@@ -17,6 +17,14 @@
     margin: 5px;
     padding: 5px;
     border-bottom: 1px solid rgba(27, 43, 94, 0.34);
+    position: relative;
+    cursor: pointer;
+}
+.recomList .recommd_1_1 img{
+    margin-top: 7px;
+}
+.recomList .recommd_1_1 a{
+    margin-left: 75px;
 }
 .recomList .rank{
    font-size: 12px;

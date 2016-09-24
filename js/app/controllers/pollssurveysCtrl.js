@@ -1,5 +1,10 @@
 rbsApp.controller('pollssurveysCtrl', function($scope) {
-   
+
+    $(".home").removeClass('active');
+    $(".connection").removeClass('active');
+    $(".pollsurvey").addClass('active');
+    $(".group").removeClass('active');
+
     $scope.pollsData = [{
         "date": "22/09/2016",
         "name": "Jack",
@@ -26,26 +31,26 @@ rbsApp.controller('pollssurveysCtrl', function($scope) {
         "topic": "Mutual Funds",
         "Points": 500
     }];
-    
-     $scope.closedPollData = [{
+
+    $scope.closedPollData = [{
         "date": "22/07/2016",
         "name": "Mike",
-        "topic": "Investment Banking",
+        "topic": "Vehicle Loan",
         "Points": 2500
     },{
         "date": "12/06/2016",
         "name": "Ted",
-        "topic": "Gold Loan",
+        "topic": "Home Loan",
         "Points": 1500
     },{
         "date": "18/04/2016",
         "name": "Smith",
-        "topic": "Vehicle Loan",
+        "topic": "Investment Banking",
         "Points": 500
     },{
         "date": "15/04/2016",
         "name": "Jacob",
-        "topic": "Home Loan",
+        "topic": "Salary Account",
         "Points": 250
     },{
         "date": "22/03/2016",
@@ -54,12 +59,45 @@ rbsApp.controller('pollssurveysCtrl', function($scope) {
         "Points": 500
     }]
     $scope.detailsPopup = function(poll){
-       
-       
-    console.log(poll);
-       
+
+        if(poll.topic == "Investment Banking"){
+
+
+            $('#InvestmentsurveyModal').modal('show');
+
+
+        }else if(poll.topic == "Gold Loan"){
+
+
+            $('#GoldsurveyModal').modal('show');
+
+
+        }
+
+
+
     };
-    
-    
-    
+
+    $scope.detailsclosedPopup = function(poll){
+
+        if(poll.topic == "Vehicle Loan"){
+
+
+            $('#VehicleClosedSurveyModal').modal('show');
+
+
+        }else if(poll.topic == "Home Loan"){
+
+
+            $('#HomeClosedSurveyModal').modal('show');
+
+
+        }
+
+
+
+    };
+
+
+
 });

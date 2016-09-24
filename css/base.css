@@ -82,7 +82,7 @@ li a:hover, li.active a{
     padding-bottom: 0px;
 }
 .recommended_view{
-    height: 60px;
+    height: 85px;
     border-radius: 2px;
     border: 1px  solid #1b2b5e;
     margin-bottom: 5px;
@@ -148,7 +148,7 @@ li a:hover, li.active a{
 }
 .recommd_1_1{
     width: 100%;
-    height: 60px;
+    height: 100%;
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
@@ -197,7 +197,8 @@ li a:hover, li.active a{
     color: #ffffff;
 }
 .trend_view sup{
-    top: -2.5em
+    top: -50.5px;
+    left: 5px;
 }
 .level_up{
     font-weight: bold;
@@ -215,8 +216,28 @@ li a:hover, li.active a{
 }
 
 .modal-header span{
-    background-color: #eea236;
+    /*background-color: #eea236;*/
+    color: #ffffff;
+    padding: 5px;
 }
 .modal-body{
-    height: 60px;
+    height: 85px;
+}
+.next_level{
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.poor{
+    background-color: #d43f3a;
+}
+.average{
+    background-color: #eea236;
+}
+.good{
+    background-color: #255625;
+}
+.prof_nam a{
+    color: #03a9f4;
 }

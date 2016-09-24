@@ -16,9 +16,9 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>SNO</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
+                                             <th>Date</th>
+                                            <th>Name</th>
+                                            <th>Topic</th>
                                             <th>Points</th>
 
                                         </tr>
@@ -28,7 +28,7 @@
                                             <th scope="row">{{poll.date}}</th>
                                             <td>{{poll.name}}</td>
                                             <td>{{poll.topic}}</td>
-                                            <td ng-click="detailsPopup(poll)">{{poll.Points}}</td>
+                                            <td style="cursor : pointer;" ng-click="detailsPopup(poll)">{{poll.Points}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -60,13 +60,15 @@
                                             <th scope="row">{{poll.date}}</th>
                                             <td>{{poll.name}}</td>
                                             <td>{{poll.topic}}</td>
-                                            <td ng-click="detailsPopup(poll)">{{poll.Points}}</td>
+                                            <td style="cursor : pointer;" ng-click="detailsclosedPopup(poll)">{{poll.Points}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
 
 
                             </div>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -74,10 +76,128 @@
             </div>
             </div>
 
-            <!-- jQuery -->
-
         <div class="launch-poll-section text-center">
-            <button type="button" class="btn btn-primary launchbtnpoll" ><a href="#!/launchpoll">Launch Poll / Survey</a></button>
-            <button type="button" class="btn btn-primary launchbtnpoll" ><a href="">View Poll/Survey Status</a></button>
+            <a href="#!/launchpoll"><button type="button" class="btn btn-primary launchbtnpoll" >Launch Poll / Survey</button></a>
+            <button type="button" class="btn btn-primary launchbtnpoll" ><a href="">Poll / Survey Results</a></button>
         </div>
+            <!-- jQuery -->
+        
+           <!-- Modal -->
+    <div class="modal fade" id="InvestmentsurveyModal" role="dialog">
+        <div class="modal-dialog">
+
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Poll /Survey !</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you prefer to avail the Telephone banking of the Invesment banking services?</p>
+                </div>
+                <input type="radio" style="margin-left: 16px;" name="yes" value="yes"> Yes<br><br>
+                <input type="radio" style="margin-left: 16px;" name="no" value="no"> No<br>
+                <br>
+                
+                <div class="modal-footer" style="text-align: center;">
+                     <button type="button" class="btn btn-primary launchbtnpoll" data-dismiss="modal">Submit</button>
+                    <button type="button" class="btn btn-primary launchbtnpoll" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
         </div>
+    </div>
+        
+         <!-- Modal -->
+        
+
+        
+        
+           <!-- Modal -->
+    <div class="modal fade" id="GoldsurveyModal" role="dialog">
+        <div class="modal-dialog">
+
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Poll /Survey !</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Does RBS offer competitive service charges?</p>
+                </div>
+                <input type="radio" style="margin-left: 16px;" name="yes" value="yes"> Yes<br><br>
+                <input type="radio" style="margin-left: 16px;" name="no" value="no"> No<br>
+                <br>
+                
+                <div class="modal-footer" style="text-align: center;">
+                     <button type="button" class="btn btn-primary launchbtnpoll" data-dismiss="modal">Submit</button>
+                    <button type="button" class="btn btn-primary launchbtnpoll" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        
+         <!-- Modal   
+       $('#VehicleClosedSurveyModal').modal('show');
+    
+           
+       }else if(poll.topic == "Gold Loan"){
+           
+           
+           $('#HomeClosedSurveyModal').modal('show');-->
+        
+        
+           <!-- Modal -->
+    <div class="modal fade" id="VehicleClosedSurveyModal" role="dialog">
+        <div class="modal-dialog">
+
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Poll /Survey !</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Would you like  RBS Vehicle Loan operations most?</p>
+                </div>
+                <br><div style="margin-left: 16px; font-size: 14px; margin-top: -19px;" name="yes" value="yes"> Yes - 90%</div> <br>
+                <br><div style="margin-left: 16px; font-size: 14px; margin-top: -19px;" name="no" value="no"> No - 10%</div> <br>
+                <br>
+                
+                <div class="modal-footer" style="text-align: center;">
+                    <button type="button" class="btn btn-primary launchbtnpoll" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        
+         <!-- Modal   
+
+       
+           <!-- Modal -->
+    <div class="modal fade" id="HomeClosedSurveyModal" role="dialog">
+        <div class="modal-dialog">
+
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Poll /Survey !</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Would you like  RBS Home Loan operations most?</p>
+                </div>
+                <br><div style="margin-left: 16px; font-size: 14px; margin-top: -19px;" name="yes" value="yes"> Yes - 80%</div> <br><br>
+                <br><div style="margin-left: 16px; font-size: 14px; margin-top: -19px;" name="no" value="no"> No - 20%</div> <br>
+                <br>
+                
+                <div class="modal-footer" style="text-align: center;">
+                    <button type="button" class="btn btn-primary launchbtnpoll" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>

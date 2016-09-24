@@ -25,7 +25,8 @@ rbsApp.config(function($locationProvider, $routeProvider) {
             controller:'groupsCtrl'
         })
         .when('/launchpoll',{
-            templateUrl:'js/app/views/launchpoll.html'
+            templateUrl:'js/app/views/launchpoll.html',
+            controller:'launchpollCtrl'
 
         });
 

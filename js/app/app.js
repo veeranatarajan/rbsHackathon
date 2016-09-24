@@ -2,7 +2,7 @@
  * Created by VEERAMANIN on 9/23/2016.
  */
 'use strict';
-var rbsApp = angular.module('rbsApp', ['ngRoute']);
+var rbsApp = angular.module('rbsApp', ['ngRoute', 'ui.bootstrap']);
 
 rbsApp.config(function($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
@@ -14,7 +14,7 @@ rbsApp.config(function($locationProvider, $routeProvider) {
         })
         .when('/pollsurveys',{
             templateUrl:'js/app/views/polls.html',
-            controller:'pollssurveysCtrl.js'
+            controller:'pollssurveysCtrl'
         })
         .when('/connections',{
             templateUrl:'js/app/views/connections.html',

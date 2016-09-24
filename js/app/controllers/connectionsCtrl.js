@@ -13,4 +13,12 @@ rbsApp.controller('connectionsCtrl', function($scope){
         {pname:'Mutual Funds',points:'10 Points',img:''},
         {pname:'Car Loan',points:'8 Points',img:''},
         {pname:'Home Loan',points:'5 Points',img:''}];
+
+    $scope.users = [
+        {firstname: 'John', lastname: 'Smith'},
+        {firstname: 'Jane', lastname: 'Due'},
+        {firstname: 'Bob', lastname: 'Rand'}
+    ];
+
+    $scope.dynamicPopover = {templateUrl: '../views/myPopoverTemplate.html'};
 });

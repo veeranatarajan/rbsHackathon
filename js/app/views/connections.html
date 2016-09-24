@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="pageHolder">
-            <section class="grps-sec col-md-8">
-                <div class="col-md-8">
-                    <div class="panel panel-primary">
+            <section class="grps-sec col-md-12">
+                <div class="col-md-6">
+                    <div class="panel panel-primary connPanel">
                         <div class="panel-heading">Recommend to Your Connections</div>
                         <div class="panel-body">
                             <div class="recomList" ng-repeat="rlist in recomList">
@@ -14,27 +14,28 @@
                                     {{rlist.points}}
                                 </div>
                                 <div class="col-xs-3 leader_img">
-                                    <img src="img/user.png" class="img-circle"/>
+                                    <img src="img/user.png" class="img-circle" popover="{{rlist.pname}}"  popover-trigger="focus"/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">Link Social Network</div>
-                        <div class="panel-body">
-                            <div class="socialImgs" id="fb"></div>
-                            <div class="socialImgs" id="tweet"></div>
-                            <div class="socialImgs" id="linkedin"></div>
+                <div class="col-md-6">
+                    <div class="panel panel-primary connPanel">
+                        <div class="panel-heading">
+                            My Connection
+                            <input class="searchConnTxt pull-right" type="text" placeholder="Search Connection" ng-model="userSearch"/>
+                            <div class="pull-right searchRes">
+                                <div ng-repeat="user in users | filter:userSearch">
+                                    <div class="searchContent">
+                                        {{user.firstname}} {{user.lastname}}
+                                        <div class="pull-right">
+                                            <img src="img/person_add.png" class="img-circle addPer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section class="grps-sec col-md-8">
-                <div class="col-md-8">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">My Connection</div>
                         <div class="panel-body">
                             <div class="myConList" ng-repeat="mylist in myConList">
                                 <div class="col-xs-6 leader_name">
@@ -58,13 +59,26 @@
                         </div>
                     </div>
                 </div>
+
+            </section>
+            <!--<section class="grps-sec col-md-8">
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Link Social Network</div>
+                        <div class="panel-body">
+                            <div class="socialImgs" id="fb"></div>
+                            <div class="socialImgs" id="tweet"></div>
+                            <div class="socialImgs" id="linkedin"></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">Search Connection</div>
                         <div class="panel-body"></div>
                     </div>
                 </div>
-            </section>
+            </section>-->
         </div>
     </div>
 </div>

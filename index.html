@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Customer Collabration Portal</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/base.css" rel="stylesheet" type="text/css"/>
+        <link href="css/connnections.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="css/polls_surveys.css" rel="stylesheet" type="text/css">
+        <link href="css/launchpolls_surveys.css" rel="stylesheet" type="text/css">-->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/vendor/angular-1.4.8.min.js"></script>
+        <script src="js/vendor/angular-route.js"></script>
+        <script src="js/app/app.js"></script>
+        <script src="js/app/controllers/homeCtrl.js"></script>
+        <script src="js/app/controllers/connectionsCtrl.js"></script>
+        <script src="js/app/controllers/pollssurveysCtrl.js"></script>
+    </head>
+    <body>
+        <div id="page-container" ng-app="rbsApp">
+            <div id="header">
+                <div class="container-fluid">
+                    <div class="left_menu navbar-left">
+                        <div class="logo_top navbar-header">
+                            <img src="img/rbs-logo.jpg" class="img-circle">
+                            <a class="navbar-brand" href="index.html">Customer Collabration</a>
+                        </div>
+                        <div class="menu_bottom">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#!/home">Home</a></li>
+                                <li><a href="#!/pollsurveys">Polls & Surveys</a></li>
+                                <li><a href="#!/connections">Connections</a></li>
+                                <li><a href="#!/groups">Groups</a></li>
+                                <li><a href="discussion_board.html">Discussion Forums</a></li>
+                                <li><a href="discussion_board.html">Campang</a></li>
+                                <li><a href="discussion_board.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav navbar-nav navbar-right">
+                        <div class="profile_det">
+                            <div class="prof_nam">
+                                <label>Name:</label>&nbsp;<span>Team Millennials</span>
+                            </div>
+                            <div class="prof_nam">
+                                <label>Points:</label>&nbsp;<span>60 pts</span>
+                            </div>
+                        </div>
+                        <div class="profile_img">
+                            <img src="img/user.png" class="img-circle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pageHolder" ng-view></div>
+        </div>
+    </body>
+</html>

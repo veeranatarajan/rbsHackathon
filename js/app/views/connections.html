@@ -1,0 +1,70 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="pageHolder">
+            <section class="grps-sec col-md-8">
+                <div class="col-md-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Recommend to Your Connections</div>
+                        <div class="panel-body">
+                            <div class="recomList" ng-repeat="rlist in recomList">
+                                <div class="col-xs-6 leader_name">
+                                    {{rlist.pname}}
+                                </div>
+                                <div class="col-xs-3 rank">
+                                    {{rlist.points}}
+                                </div>
+                                <div class="col-xs-3 leader_img">
+                                    <img src="img/user.png" class="img-circle"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Link Social Network</div>
+                        <div class="panel-body">
+                            <div class="socialImgs" id="fb"></div>
+                            <div class="socialImgs" id="tweet"></div>
+                            <div class="socialImgs" id="linkedin"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grps-sec col-md-8">
+                <div class="col-md-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">My Connection</div>
+                        <div class="panel-body">
+                            <div class="myConList" ng-repeat="mylist in myConList">
+                                <div class="col-xs-6 leader_name">
+                                    <img src="img/user.png" class="img-circle conImg"/>
+                                    {{mylist.name}}
+                                </div>
+                                <div class="col-xs-3 raveBtn">
+                                    <div class="col-xs-6 myconRank">
+                                        <div>RANK</div>
+                                        <div>{{mylist.rank}}</div>
+                                    </div>
+                                    <div class="col-xs-6 myconPoints">
+                                        <div>POINTS</div>
+                                        <div>{{mylist.points}}</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 raveBtn">
+                                    <button class="btn">Chat</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Search Connection</div>
+                        <div class="panel-body"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

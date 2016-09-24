@@ -1,0 +1,56 @@
+.leader_img{
+    text-align: center;
+}
+.pageHolder{
+    display: block;
+    margin: auto;
+}
+.grps-sec{
+    margin: 5px 0;
+    height: 250px;
+}
+.recomList, .myConList{
+    height: 45px;
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 1px solid rgba(27, 43, 94, 0.34);
+}
+.recomList .rank{
+   font-size: 12px;
+}
+.recomList .rank, .recomList .leader_name{
+    display: block;
+    border-right: 1px solid rgba(0, 0, 0, 0.34);
+    padding-top: 4px;
+}
+.conImg{
+    width: 30px;
+    height: 30px;
+}
+.raveBtn{
+    text-align: center;
+}
+.recomList img{
+    width: 30px;
+    height: 30px;
+}
+.myconRank, .myconPoints{
+    text-align: center;
+    font-size: 10px;
+}
+.socialImgs{
+    width: 55px;
+    height: 55px;
+    background-size: 55px 55px;
+    margin: 8px;
+    float: left;
+}
+#fb{
+    background-image: url('../img/facebook.png');
+}
+#tweet{
+    background-image: url('../img/twitter.png');
+}
+#linkedin{
+    background-image: url('../img/linkedin.png');
+}
